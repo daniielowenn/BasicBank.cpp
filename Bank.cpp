@@ -37,4 +37,28 @@ int main() {
     while (true) {
       std::cout << "Menu:" << std::endl;
       std::cout << "1. Deposit money" << std::endl;
-      std::cout << "2.
+      std::cout << "2. Withdraw money" << std::endl;
+std::cout << "3. Check balance" << std::endl;
+std::cout << "4. Exit" << std::endl;
+int choice;
+std::cin >> choice;
+if (choice == 1) {
+double amount;
+std::cout << "Enter the amount to deposit: ";
+std::cin >> amount;
+account.deposit(amount);
+} else if (choice == 2) {
+double amount;
+std::cout << "Enter the amount to withdraw: ";
+std::cin >> amount;
+account.withdraw(amount);
+} else if (choice == 3) {
+std::cout << "Current balance: $" << account.checkBalance() << std::endl;
+} else if (choice == 4) {
+break;
+} else {
+std::cout << "Invalid choice" << std::endl;
+}
+}
+return 0;
+}
